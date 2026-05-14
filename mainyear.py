@@ -8,7 +8,7 @@ import io
 # --- 1. CONFIGURACIÓN ---
 # Puedes cambiar esta ruta si el archivo .csv está en otra ubicación
 FILE_PATH = 'acme-export.csv'
-BUTTON_NAME_FILTER = 'B3 Maintenance'
+BUTTON_NAME_FILTER = 'B3 DPT B'
 
 # --- 2. CARGAR Y PREPARAR DATOS ---
 try:
@@ -83,4 +83,5 @@ plt.grid(True, alpha=0.5)
 fig.tight_layout() # Ajustar el diseño para que no se corten las etiquetas
 
 # --- 5. MOSTRAR GRÁFICO ---
-plt.show()
+plt.show() 
+

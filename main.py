@@ -6,14 +6,14 @@ import pandas as pd
 import io
 
 # Cargar datos
-df = pd.read_csv('mcneely-export.csv')
+df = pd.read_csv('acme-export.csv')
 
 # Convertir fecha
 # df['Date_Time'] = pd.to_datetime(df['Date_Time'])
 df['Date_Time'] = pd.to_datetime(df['Date_Time'], format='%m/%d/%Y %I:%M:%S %p')
 
-# Filtrar por "B3 Maintenance"
-df_b3 = df[df['Button_Name'] == 'B3 Maintenance'].copy()
+# Filtrar por "B3 DPT B"
+df_b3 = df[df['Button_Name'] == 'B3 DPT B'].copy()
 
 # Extraer día del mes
 df_b3['Day'] = df_b3['Date_Time'].dt.day
@@ -40,7 +40,7 @@ ax2.plot(daily_stats.index, daily_stats['mean'], color=color, marker='s', linest
 ax2.tick_params(axis='y', labelcolor=color)
 
 # Título y Grid
-plt.title('B3 Maintenance: Llamadas y Tiempo de Respuesta por Día del Mes')
+plt.title('B3 DPT B: Llamadas y Tiempo de Respuesta por Día del Mes')
 plt.grid(True, alpha=0.3)
 fig.tight_layout()
 
